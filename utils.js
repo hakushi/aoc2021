@@ -3,3 +3,6 @@ exports.parseDataAsInt = (string) =>
 
 exports.parseDataAsString = (string) =>
   string.split("\n").map((value) => value);
+
+exports.sortNumberArray = (array, asc = true) =>
+  array.sort((a, b) => (asc ? a - b : b - a));
