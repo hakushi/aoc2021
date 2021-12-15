@@ -6,3 +6,17 @@ exports.parseDataAsString = (string) =>
 
 exports.sortNumberArray = (array, asc = true) =>
   array.sort((a, b) => (asc ? a - b : b - a));
+
+exports.getMatrixColumns = (matrix) => {
+  const columns = [];
+
+  for (let i = 0; i < matrix.length; i++) {
+    const column = [];
+    for (let j = 0; j < matrix.length; j++) {
+      column.push(matrix[j][i]);
+    }
+    columns.push(column);
+  }
+
+  return columns;
+};
